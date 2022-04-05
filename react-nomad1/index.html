@@ -1,0 +1,47 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="root"></div>
+    </body>
+    <script
+        crossorigin
+        src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+        crossorigin
+        src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+    <script>
+        const title = (
+            <h3 id="title" onMouseEnter={() => console.log("mouse enter")}></h3>
+        );
+
+        const button = (<button style={{backgroundColor:"tomato",}}
+        onClick{()=>console.log("im clicked")}>Click me</button>);
+
+        // const root = document.getElementById("root");
+        // const h3 = React.createElement(
+        //     "h3",
+        //     {
+        //         onMouseEnter: () => {
+        //             console.log("mouse enter");
+        //         },
+        //     },
+        //     "Hello, i'm a span"
+        // );
+        // const btn = React.createElement(
+        //     "button",
+        //     {
+        //         onClick: () => console.log("i'm clicked"),
+        //     },
+        //     "Click me"
+        // );
+        const container = React.createElement("div", null, [h3, btn]);
+        ReactDOM.render(container, root);
+    </script>
+</html>
